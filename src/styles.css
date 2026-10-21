@@ -121,11 +121,6 @@ a:hover {
   letter-spacing: 0.08em;
 }
 
-.lighthouse {
-  width: 1.35rem;
-  height: auto;
-}
-
 .site-nav {
   display: flex;
   flex-wrap: wrap;
@@ -822,13 +817,6 @@ a:hover {
   display: grid;
   justify-items: center;
   gap: 0.55rem;
-}
-
-.footer-mark {
-  width: 1.7rem;
-  color: var(--sand);
-  margin-bottom: 0.45rem;
-  opacity: 0.9;
 }
 
 .footer-names {
