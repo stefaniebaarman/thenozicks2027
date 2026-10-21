@@ -601,142 +601,81 @@ a:hover {
 }
 
 .photos {
-  background:
-    radial-gradient(700px 320px at 80% 20%, rgba(168, 137, 90, 0.08), transparent 60%),
-    linear-gradient(180deg, rgba(255, 252, 248, 0.9), rgba(243, 246, 244, 0.4));
+  background: linear-gradient(180deg, #f3f7f5 0%, #eef4f1 100%);
 }
 
-.photos .section-lede {
-  margin-bottom: 0.5rem;
+.photos-eyebrow,
+.photos-title,
+.photos-lede {
+  text-align: center;
 }
 
-.photo-collage {
+.photos-lede {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 36ch;
+}
+
+.polaroid-stack {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-  gap: clamp(0.35rem, 1.5vw, 0.85rem);
-  margin: 3.25rem auto 0;
-  max-width: 860px;
-  padding: 1.75rem 0.5rem 2.75rem;
+  align-items: flex-end;
+  gap: clamp(1.25rem, 3.5vw, 2.25rem);
+  width: min(920px, 100%);
+  margin: 2.75rem auto 0;
+  min-height: clamp(340px, 58vw, 460px);
+  padding: 1rem 0 2rem;
 }
 
-.photo-tile {
-  margin: 0;
+.polaroid {
   position: relative;
-  width: min(32%, 250px);
-  flex-shrink: 0;
-  background: #fffefb;
-  padding: 0.7rem 0.7rem 1.7rem;
-  box-shadow:
-    0 2px 4px rgba(22, 50, 58, 0.06),
-    0 16px 36px rgba(22, 50, 58, 0.14);
-  transition: transform 0.45s var(--ease), box-shadow 0.45s var(--ease);
+  margin: 0;
+  width: min(30%, 240px);
+  padding: 0.65rem 0.65rem 1.85rem;
+  background: #fff;
+  box-shadow: 0 14px 32px rgba(22, 50, 58, 0.14);
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
 }
 
-.photo-tape {
-  position: absolute;
-  top: -0.65rem;
-  left: 50%;
-  z-index: 2;
-  width: 4.25rem;
-  height: 1.35rem;
-  background:
-    linear-gradient(
-      115deg,
-      rgba(212, 196, 168, 0.35) 0%,
-      rgba(212, 196, 168, 0.72) 45%,
-      rgba(196, 176, 142, 0.55) 100%
-    );
-  box-shadow: 0 1px 2px rgba(22, 50, 58, 0.08);
-  transform: translateX(-50%) rotate(-2deg);
-  mix-blend-mode: multiply;
-}
-
-.photo-tape::before,
-.photo-tape::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    repeating-linear-gradient(
-      -18deg,
-      transparent,
-      transparent 3px,
-      rgba(255, 255, 255, 0.12) 3px,
-      rgba(255, 255, 255, 0.12) 4px
-    );
-  opacity: 0.7;
-}
-
-.photo-tile img {
-  width: 100%;
-  height: auto;
+.polaroid img {
   display: block;
-  aspect-ratio: 3 / 4;
+  width: 100%;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
 }
 
-.photo-a {
+.polaroid-left {
   z-index: 1;
-  transform: rotate(-4deg) translateY(0.35rem);
+  transform: rotate(-7deg) translateY(0.85rem);
 }
 
-.photo-a img {
-  object-position: center 18%;
+.polaroid-left img {
+  object-position: center 28%;
 }
 
-.photo-a .photo-tape {
-  transform: translateX(-50%) rotate(-4deg);
-}
-
-.photo-b {
-  z-index: 2;
-  transform: rotate(2deg) translateY(1.5rem);
-  margin-left: -0.65rem;
-}
-
-.photo-b img {
-  object-position: center 30%;
-}
-
-.photo-b .photo-tape {
-  transform: translateX(-50%) rotate(2deg);
-  width: 3.85rem;
-}
-
-.photo-c {
-  z-index: 1;
-  transform: rotate(-2.5deg) translateY(0.15rem);
-  margin-left: -0.65rem;
-}
-
-.photo-c img {
-  object-position: center 22%;
-}
-
-.photo-c .photo-tape {
-  transform: translateX(-50%) rotate(-1deg);
-  width: 4rem;
-}
-
-.photo-tile:hover {
+.polaroid-center {
   z-index: 3;
-  box-shadow:
-    0 4px 8px rgba(22, 50, 58, 0.08),
-    0 22px 44px rgba(22, 50, 58, 0.18);
+  width: min(32%, 255px);
+  transform: rotate(0deg) translateY(-1.1rem);
 }
 
-.photo-a:hover {
-  transform: rotate(-2deg) translateY(0) scale(1.02);
+.polaroid-center img {
+  object-position: center 16%;
 }
 
-.photo-b:hover {
-  transform: rotate(1deg) translateY(1.1rem) scale(1.02);
+.polaroid-right {
+  z-index: 2;
+  transform: rotate(7deg) translateY(0.85rem);
 }
 
-.photo-c:hover {
-  transform: rotate(-1deg) translateY(-0.2rem) scale(1.02);
+.polaroid-right img {
+  object-position: center 20%;
+}
+
+.polaroid:hover {
+  z-index: 4;
+  box-shadow: 0 20px 40px rgba(22, 50, 58, 0.18);
 }
 
 .registry {
@@ -855,38 +794,26 @@ a:hover {
     grid-template-columns: 1fr;
   }
 
-  .photo-collage {
-    max-width: 100%;
-    flex-wrap: wrap;
-    gap: 0.75rem 0.25rem;
-    padding-bottom: 1.5rem;
+  .polaroid-stack {
+    min-height: 300px;
+    gap: 0.75rem;
   }
 
-  .photo-tile {
-    width: min(44%, 180px);
+  .polaroid {
+    width: min(31%, 155px);
+    padding: 0.45rem 0.45rem 1.25rem;
   }
 
-  .photo-b {
-    margin-left: -0.5rem;
-    transform: rotate(2.5deg) translateY(0.85rem);
+  .polaroid-center {
+    width: min(33%, 165px);
   }
 
-  .photo-c {
-    margin-left: auto;
-    margin-right: auto;
-    transform: rotate(-2deg) translateY(-0.25rem);
+  .polaroid-left {
+    transform: rotate(-6deg) translateY(0.5rem);
   }
 
-  .photo-a:hover {
-    transform: rotate(-2deg) translateY(-0.15rem) scale(1.02);
-  }
-
-  .photo-b:hover {
-    transform: rotate(1.5deg) translateY(0.55rem) scale(1.02);
-  }
-
-  .photo-c:hover {
-    transform: rotate(-1deg) translateY(-0.45rem) scale(1.02);
+  .polaroid-right {
+    transform: rotate(6deg) translateY(0.5rem);
   }
 
   .hero-content {
@@ -901,12 +828,22 @@ a:hover {
 
   .hero-media img,
   .hero-scroll span,
-  .reveal,
-  .photo-tile,
-  .photo-tile:hover {
+  .reveal {
     animation: none !important;
     transition: none !important;
     opacity: 1;
     transform: none;
+  }
+
+  .polaroid-left {
+    transform: rotate(-7deg) translateY(0.85rem);
+  }
+
+  .polaroid-center {
+    transform: rotate(0deg) translateY(-1.1rem);
+  }
+
+  .polaroid-right {
+    transform: rotate(7deg) translateY(0.85rem);
   }
 }
