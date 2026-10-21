@@ -1,8 +1,8 @@
 # Shannon & Jared Wedding Website
 
-A custom wedding website for Shannon Baarman and Jared Nozick — September 25, 2027 at the Hyatt Regency Chesapeake Bay in Cambridge, Maryland.
+Custom wedding website for Shannon Baarman and Jared Nozick — September 25, 2027 at the Hyatt Regency Chesapeake Bay in Cambridge, Maryland.
 
-Content is based on their [The Knot wedding page](https://www.theknot.com/us/shannon-baarman-and-jared-nozick-2027-09-25).
+**Live site:** https://thenozicks2027.netlify.app/
 
 ## Run locally
 
@@ -11,11 +11,16 @@ npm install
 npm run dev
 ```
 
-## Build for production
+## Deploy
+
+The site auto-deploys from GitHub (`main`) to Netlify.
+
+After making changes:
 
 ```bash
-npm run build
-npm run preview
+git add .
+git commit -m "Describe your update"
+git push
 ```
 
-The production files are written to `dist/`, which you can deploy to Netlify, Vercel, GitHub Pages, or any static host.
+Netlify will rebuild and update the live site.
