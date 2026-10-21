@@ -623,9 +623,8 @@ a:hover {
   align-items: flex-end;
   gap: clamp(1.25rem, 3.5vw, 2.25rem);
   width: min(920px, 100%);
-  margin: 2.75rem auto 0;
-  min-height: clamp(340px, 58vw, 460px);
-  padding: 1rem 0 2rem;
+  margin: 1.85rem auto 0;
+  padding: 0.35rem 0 1.5rem;
 }
 
 .polaroid {
@@ -795,8 +794,8 @@ a:hover {
   }
 
   .polaroid-stack {
-    min-height: 300px;
     gap: 0.75rem;
+    margin-top: 1.5rem;
   }
 
   .polaroid {
