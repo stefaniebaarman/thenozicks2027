@@ -8,7 +8,7 @@ function updateCountdown() {
   const diff = WEDDING_DATE.getTime() - now.getTime();
 
   if (diff <= 0) {
-    el.textContent = "Today’s the day — we can’t wait to celebrate with you.";
+    el.textContent = "Today’s the day. We can’t wait to celebrate with you.";
     return;
   }
 
