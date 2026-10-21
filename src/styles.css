@@ -654,6 +654,15 @@ a:hover {
   grid-column: 1 / -1;
 }
 
+.thing-wide .thing-media {
+  max-width: min(100%, 520px);
+}
+
+.thing-wide .thing-media img {
+  aspect-ratio: 16 / 9;
+  max-height: 260px;
+}
+
 .qa {
   background:
     radial-gradient(600px 280px at 50% 100%, rgba(176, 143, 92, 0.08), transparent 60%),
